@@ -1,19 +1,3 @@
-// async function onFetch() {
-//   try {
-//     const response = await axios.get(
-//       `${BASE_URL}/${options.key}&${options.orientation}&${options.q}&${options.safesearch}&${options.image_type}&${options.perPage}&page=${page}`
-//     );
-//     console.log(response);
-//     items = response.json();
-//     console.log(items);
-
-//     console.log(`totalHits: ${items.totalHits}`);
-//     console.log('+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+');
-//   } catch (error) {
-//     console.error(error);
-//   }
-// }
-
 async function onFetch() {
   try {
     const response = await axios.get(
@@ -22,9 +6,6 @@ async function onFetch() {
     console.log(response.data);
     items = response.data;
     console.log('items ', items);
-    console.log(`totalHits: ${items.totalHits}`);
-    console.log('+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+');
-
     console.log(`totalHits: ${items.totalHits}`);
     console.log('+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+');
 
