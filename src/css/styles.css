@@ -25,7 +25,7 @@
 }
 
 .photo-card {
-  width: 23%;
+  width: 300px;
   height: 270px;
   padding: 5px;
   padding-bottom: 0;
@@ -92,7 +92,7 @@ input:hover {
   background-color: rgb(63, 87, 179);
 
   position: relative;
-  left: 47%;
+  left: 49%;
   top: 40px;
 }
 
