@@ -49,7 +49,7 @@ function moreMarcup() {
   page++;
   if (show > items.totalHits) {
     refs.button_load.classList.add('hidden');
-    return notifyFailTwo();
+    return notifyInfo();
   }
   show += 40;
   onFetch();
@@ -99,6 +99,10 @@ function onFetch() {
   </div>`
           );
         });
+        var lightbox = new SimpleLightbox('.gallery a', {
+          /* options */
+        });
+        lightbox.refresh();
         refs.button_load.classList.remove('hidden');
       }
     });
@@ -110,8 +114,8 @@ function notifyFail() {
   );
 }
 
-function notifyFailTwo() {
-  Notify.failure("We're sorry, but you've reached the end of search results.");
+function notifyInfo() {
+  Notify.info("We're sorry, but you've reached the end of search results.");
 }
 
 function notifySuccess() {
