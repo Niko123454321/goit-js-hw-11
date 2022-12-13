@@ -49,7 +49,7 @@ function moreMarcup() {
   page++;
   if (show > items.totalHits) {
     refs.button_load.classList.add('hidden');
-    return notifyFail();
+    return notifyFailTwo();
   }
   show += 40;
   onFetch();
@@ -110,7 +110,7 @@ function notifyFail() {
   );
 }
 
-function notifyFail() {
+function notifyFailTwo() {
   Notify.failure("We're sorry, but you've reached the end of search results.");
 }
 
