@@ -1,7 +1,6 @@
 console.log('faina_super_dog');
 
 import './css/styles.css';
-import './feath.js';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
@@ -13,6 +12,16 @@ const refs = {
   buttonSearchForm: document.querySelector('button'),
   gallery: document.querySelector('.gallery'),
   button_load: document.querySelector('.load-more'),
+};
+
+const options = {
+  BASE_URL: 'https://pixabay.com/api',
+  key: '?key=31970566-78c0d9aee70a01d48504dc051',
+  q: '',
+  image_type: 'image_type=photo',
+  orientation: 'orientation=horizontal',
+  safesearch: 'safesearch=true',
+  perPage: 'per_page=40',
 };
 
 let lightbox = new SimpleLightbox('.gallery a', {
